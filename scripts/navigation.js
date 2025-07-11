@@ -1,39 +1,32 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const content = document.getElementById("content");
-  const navLinks = document.querySelectorAll("nav a");
-
-  // Load default page if needed
-  const defaultPage = "home.html";
-  loadPage(defaultPage);
-
-  // Handle navigation clicks
-  navLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const page = link.getAttribute("href");
-      if (page) {
-        loadPage(page);
-        // Highlight active link (optional)
-        navLinks.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-      }
-    });
-  });
-
-  // Dynamic page loader
-  function loadPage(url) {
-    fetch(url)
-      .then(response => {
-        if (!response.ok) throw new Error(`Error loading ${url}`);
-        return response.text();
-      })
+// Navigation and Dynamic Content Loading
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // prevent page reload
+    const page = this.getAttribute('href');
+    fetch(page)
+      .then(res => res.text())
       .then(html => {
-        content.innerHTML = html;
-        window.scrollTo(0, 0); // Scroll to top after load
-      })
-      .catch(error => {
-        console.error("Page load error:", error);
-        content.innerHTML = `<p style="padding: 2rem; color: red;">Failed to load ${url}</p>`;
+        document.getElementById('content').innerHTML = html;
       });
-  }
+  });
 });
+
+function loadPage(page) {
+  fetch(`pages/${page}.html`)
+    .then(res => res.text())
+    .then(html => {
+      const contentArea = document.getElementById("content");
+      contentArea.innerHTML = html;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      if (page === "yoga_asanas") {
+        const script = document.createElement("script");
+        script.src = "scripts/yoga_asanas.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+    })
+    .catch(err => {
+      document.getElementById("content").innerHTML = "<h2>Page not found</h2>";
+    });
+}
