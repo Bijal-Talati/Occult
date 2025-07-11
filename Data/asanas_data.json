@@ -1,0 +1,69 @@
+{
+  "categories": [
+    {
+      "name": "Beginner",
+      "subcategories": [
+        {
+          "name": "Standing",
+          "asanas": [
+            {
+              "name": "Tadasana",
+              "procedure": "Stand straight with feet together, arms at sides. Inhale and raise arms overhead, stretch upward.",
+              "difficulty-level": "Easy",
+              "benefits": "Improves posture, balance, and respiration.",
+              "cautions": "Avoid if suffering from low blood pressure or insomnia.",
+              "Ayurvedic Relationship": "Balances Vata.",
+              "Therapeutic Uses": "Used in physiotherapy and spinal alignment.",
+              "Body System Impact": "Skeletal, Muscular"
+            },
+            {
+              "name": "Utkatasana",
+              "procedure": "From standing, bend knees and raise arms. Hold the squat position.",
+              "difficulty-level": "Moderate",
+              "benefits": "Strengthens thighs, calves, and back.",
+              "cautions": "Avoid if knee or back injuries.",
+              "Ayurvedic Relationship": "Stimulates Pitta.",
+              "Therapeutic Uses": "Improves stamina and core strength.",
+              "Body System Impact": "Muscular, Nervous"
+            }
+          ]
+        },
+        {
+          "name": "Seated",
+          "asanas": [
+            {
+              "name": "Sukhasana",
+              "procedure": "Sit cross-legged, spine erect, hands on knees.",
+              "difficulty-level": "Easy",
+              "benefits": "Promotes calmness and awareness.",
+              "cautions": "Avoid if severe hip/knee issues.",
+              "Ayurvedic Relationship": "Balances all doshas.",
+              "Therapeutic Uses": "Stress relief, meditation.",
+              "Body System Impact": "Nervous, Respiratory"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Intermediate",
+      "subcategories": [
+        {
+          "name": "Backbends",
+          "asanas": [
+            {
+              "name": "Bhujangasana",
+              "procedure": "Lie face down, lift chest using back muscles.",
+              "difficulty-level": "Moderate",
+              "benefits": "Stretches chest and lungs, strengthens spine.",
+              "cautions": "Avoid if pregnant or back injury.",
+              "Ayurvedic Relationship": "Stimulates Pitta.",
+              "Therapeutic Uses": "Asthma, back pain.",
+              "Body System Impact": "Respiratory, Muscular"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
